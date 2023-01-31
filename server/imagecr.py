@@ -10,7 +10,16 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 from datetime import datetime
 
+# options = webdriver.ChromeOptions()
+# options.add_argument('headless')
+# options.add_argument('window-size=1920x1080')
+# options.add_argument("disable-gpu")
+# # 혹은 options.add_argument("--disable-gpu")
+
+# driver = webdriver.Chrome('./chromedriver.exe', chrome_options=options)
+
 options = webdriver.ChromeOptions()
+
 # options.add_argument("headless")
 driver = webdriver.Chrome(
     executable_path="./chromedriver.exe", options=options)
@@ -132,6 +141,7 @@ urllib.request.urlretrieve(img_url[0], 'real' + ".jpg")
 driver.implicitly_wait(5)
 
 driver.close()
+
 
 # for index, link in enumerate(img_url):
 #     #     start = link.rfind('.')

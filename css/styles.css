@@ -80,6 +80,10 @@ h5 {
 	color: #fff;
 }
 
+.gray-text {
+	color:#333333;
+}
+
 .colored-line-small-center {
 	background: #008ed6;
 	display: block;

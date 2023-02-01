@@ -9,7 +9,7 @@
 	
 	
 	::Add all files in the directory
-	imagecr.py
+	C:\python311\python.exe imagecr.py
 	
 	::Commit all changes with the message "auto push". 
 	::Change as needed.

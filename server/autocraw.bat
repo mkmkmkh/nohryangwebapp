@@ -1,17 +1,8 @@
 @ECHO ON
 TITLE AUTOCRAW
-:loop
 	
-	cd "C:\VSCODE PROJECTS\nohryang0.1\server"
-	
-	
-	
-	::Add all files in the directory
-	python imagecr.py
-	
-	cmd.exe
+cd "C:\VSCODE PROJECTS\nohryang0.1\server"
 
-	TIMEOUT 300
+python imgcr.py
 	
-::Restart from the top.	
-goto loop
+cmd.exe

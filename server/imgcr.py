@@ -9,6 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from datetime import datetime
+from func import *
 
 # options = webdriver.ChromeOptions()
 # options.add_argument('headless')

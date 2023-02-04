@@ -163,10 +163,10 @@ t = time.localtime()
 current_time = time.strftime("%H", t)
 print(current_time)
 
-if current_time == '10' or current_time == '11':
-    urllib.request.urlretrieve(img_url[13], 'real' + ".jpg")
-else:
+if current_time == '16' or current_time == '17':
     urllib.request.urlretrieve(img_url[12], 'real' + ".jpg")
+else:
+    urllib.request.urlretrieve(img_url[13], 'real' + ".jpg")
 time.sleep(0.5)
 driver.implicitly_wait(5)
 

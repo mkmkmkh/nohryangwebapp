@@ -28,16 +28,22 @@ a, a:hover, a:active, a:focus {
 
 }
 
+a.white-text{
+	font-style: italic;;
+	color: #fff;
+}
+
 /* TYPOGRAPHIE */
 
 h1,
 h2 {
 	font-family: 'Hi Melody', cursive;
     font-weight: 300;
+	color: #fff;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 80px;
     line-height: 62px;
 }
 
@@ -60,8 +66,9 @@ h4 {
 
 h5 {
 	font-family: 'Dongle', sans-serif;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 300;
+	color: #fff;
 }
 
 
@@ -75,7 +82,7 @@ h5 {
     padding-left: 20px;
 }
 
-/* CUSTOM CLASSES */
+/* CUSTOM CLASSES */a
 
 .white-text {
 	color: #fff;
@@ -126,7 +133,7 @@ h5 {
 }
 .refresh_button{
 	width: 100px;
-	background-color: #008ed6;
+	background-color: #ffffff;
 }
 
 /* SECTIONS */
@@ -367,11 +374,11 @@ section {
 @media (max-width: 768px) { 
 
 	body {
-		font-size: 14px;
+		font-size: 20px;
 		line-height: 20px;
 	}
 	h1 {
-		font-size: 44px;
+		font-size: 60px;
 		line-height: 58px;
 	}
 
@@ -391,7 +398,7 @@ section {
 	}
 
 	h5 {
-		font-size: 14px;
+		font-size: 20px;
 		line-height: 20px;
 	}
 	

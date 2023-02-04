@@ -345,6 +345,17 @@ section {
 	color: #008ed6;
 }
 
+.map1,.map2,.map3{
+	display: none;
+	width: 90%;
+    height: 320px;
+}
+
+.map1.active,.map2.active,.map3.active{
+	display:flex;
+}
+
+
 
 /* RESPONSIVE DESIGN */
 

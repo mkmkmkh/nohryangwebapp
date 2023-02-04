@@ -90,11 +90,11 @@ driver.implicitly_wait(5)
 
 
 # 메뉴str 텍스트파일에 저장
-with open('mega.txt', 'w') as f:
-    try:
-        f.write(menu_str)
-    except:
-        pass
+# with open('mega.txt', 'w') as f:
+#     try:
+#         f.write(menu_str)
+#     except:
+#         pass
 
 
 # 스마트빌딩점
@@ -159,7 +159,14 @@ for image in images:
 time.sleep(0.5)
 driver.implicitly_wait(5)
 
-urllib.request.urlretrieve(img_url[13], 'real' + ".jpg")
+t = time.localtime()
+current_time = time.strftime("%H", t)
+print(current_time)
+
+if current_time == '10' or current_time == '11':
+    urllib.request.urlretrieve(img_url[13], 'real' + ".jpg")
+else:
+    urllib.request.urlretrieve(img_url[12], 'real' + ".jpg")
 time.sleep(0.5)
 driver.implicitly_wait(5)
 

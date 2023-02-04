@@ -4,12 +4,7 @@
 @ECHO ON
 TITLE AUTOCRAW
 
-	
-cd "C:\VSCODE PROJECTS\nohryang0.1\server"
-	
-	
-	
-	::Add all files in the directory
-python imgcr.py
-	
+
+
+start "" "C:\VSCODE PROJECTS\nohryang0.1\server\imgcr.py"
 cmd.exe

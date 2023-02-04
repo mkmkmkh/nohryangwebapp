@@ -3,7 +3,7 @@ TITLE AUTOPUSH
 
 	
 	
-cd "C:\VSCODE PROJECTS\nohryang0.1"
+cd C:\pythonvscode\nohryang0.1\server
 	
 ::  git init
 	

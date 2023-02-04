@@ -32,7 +32,6 @@ a.white-text{
 	font-style: italic;;
 	color: #fff;
 }
-
 /* TYPOGRAPHIE */
 
 h1,
@@ -195,7 +194,8 @@ section {
 	-webkit-animation: leweb_fade_move_down 2s ease-in-out infinite;
 	-moz-animation: leweb_fade_move_down 2s ease-in-out infinite;
 	animation: leweb_fade_move_down 2s ease-in-out infinite;
-   }
+}
+
 
 	/* Animated Arrow Down Header */
 	
@@ -219,13 +219,13 @@ section {
 /* ABOUT */
 
 #about i {
-	color: #fff;
-	font-size: 75px;
+	color: ivory;;
+	font-size: 20px;
 	background: #008ed6;
 	border-radius: 50%;
-	line-height: 175px;
-	height: 175px;
-	width: 175px;
+	line-height: 30px;
+	height: 30px;
+	width: 30px;
 }
 
 /* SUBSCRIBE */

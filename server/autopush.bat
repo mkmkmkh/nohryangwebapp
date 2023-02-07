@@ -3,7 +3,7 @@ TITLE AUTOPUSH
 
 	
 	
-cd C:\pythonvscode\nohryang0.1\server
+cd "C:\pythonvscode\nohryang0.1"
 	
 ::  git init
 	
@@ -14,5 +14,3 @@ git commit -m "auto push"
 git push
 
 cmd.exe
-
-echo Complete. Relaunching...

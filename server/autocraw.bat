@@ -1,5 +1,5 @@
 
-::run python every 5 minutes
+::run python every 15 minutes
 
 @ECHO ON
 TITLE AUTOCRAW

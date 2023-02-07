@@ -40,3 +40,12 @@ def upload_file(file_path, file_name):
         by=By.CLASS_NAME, value='_a9--._a9_1').click()
     time.sleep(0.5)
     driver.implicitly_wait(5)
+#image upload
+    driver.get("https://www.instagram.com/nohryangbob/")
+    time.sleep(0.5)
+    driver.implicitly_wait(5)
+    
+    driver.find_element(
+        by=By.XPATH, value='//*[@id="mount_0_0_9q"]/div/div/div/div[1]/div/div/div/div[1]/div[1]/div[1]/div/div/div/div/div[2]/div[7]/div/div/a/div').click()
+    driver.implicitly_wait(5)
+    

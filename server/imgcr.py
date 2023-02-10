@@ -84,7 +84,6 @@ driver.implicitly_wait(5)
 
 urllib.request.urlretrieve(img_url[0], 'mega' + ".jpg")
 time.sleep(0.5)
-driver.implicitly_wait(5)
 
 # 메뉴 텍스트 불러오기
 

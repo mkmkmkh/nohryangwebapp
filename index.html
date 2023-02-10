@@ -30,6 +30,7 @@
 						
 		<link rel="stylesheet" type="text/css" href="./style.css" />	
 		<script type="module" src="./main.js"></script>
+		<script src="js/includeHTML.js"></script>
 	</head>
 <!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NNZVJMNDYE"></script>
@@ -86,7 +87,7 @@
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1582.4022407440912!2d126.94049500220322!3d37.51252930095768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9f68f6994b71%3A0xf6714cf9398c8fbf!2z6rOo65Og67O8OSDrqZTqsIDsiqTthLDrlJTtg4Dsm4zsoJA!5e0!3m2!1sko!2skr!4v1675515395790!5m2!1sko!2skr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
 						<!-- code injection -->
-						<div include-html="./server/megatodaymenu.html"></div>
+						<div include-html="./server/megatodaymenu.html"></div>	
 						<!-- code injection -->
 					</div>
 					<!-- Section 2 -->
@@ -221,6 +222,6 @@
 		<script src="js/main.js" defer></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_XjV5TyWTfERZbdTavIph60Gj6yQKYyg&callback=initMap&v=weekly"
 								defer></script>
-		<script src="js/includeHTML.js"></script>
+		<script>includeHTML();</script>
 </body>
 </html>

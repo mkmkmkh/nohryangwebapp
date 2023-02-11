@@ -7,6 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from bs4 import BeautifulSoup
 import time
 from datetime import datetime
 # from func import *
@@ -85,15 +86,18 @@ driver.implicitly_wait(5)
 urllib.request.urlretrieve(img_url[0], 'mega' + ".jpg")
 time.sleep(0.5)
 
-# 메뉴 텍스트 불러오기
+# 메뉴 html 크롤링해서 html파일에 저장
 
+# html_source = driver.page_source
+# soup = BeautifulSoup(html_source, 'html.parser')
+# menu = soup.find('h1', attrs={"class": "_aacl._aaco._aacu._aacx._aad7._aade"})
+# print(menu.prettify())
 
-# 메뉴str 텍스트파일에 저장
-# with open('mega.txt', 'w') as f:
-#     try:
-#         f.write(menu_str)
-#     except:
-#         pass
+# # html파일쓰기
+# f = open('megatodaymenu.html', 'w')
+# message = menu.prettify()
+# f.write(message)
+# f.close()
 
 
 # 스마트빌딩점

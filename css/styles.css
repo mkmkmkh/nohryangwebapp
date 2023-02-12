@@ -41,7 +41,7 @@ h2 {
 	color: #fff;
 }
 
-h1 {
+h1{
     font-size: 80px;
     line-height: 62px;
 }
@@ -51,7 +51,7 @@ h2 {
     line-height: 42px;
 }
 
-h3 {
+h3, .restaurant_list__item{
     font-size: 22px;
     line-height: 38px;
     font-weight: 300;
@@ -72,6 +72,12 @@ h5 {
 	color: #fff;
 }
 
+.restaurant_list__title {
+	font-family: 'Hi Melody', cursive;
+    font-weight: 300;
+	font-size: 80px;
+    line-height: 62px;
+}
 
 /* FORM GROUPS */
 
@@ -355,7 +361,18 @@ section {
 	display:flex;
 }
 
-
+div.reataurant_around{
+	display:flex;
+}
+div.restaurant_list{
+	width: 20%;
+	margin-bottom: 30px;
+	border: 1px, solid, #008ed6;
+	border-radius: 20%;
+}
+div.restaurant_list__title{
+	margin-bottom: 20px;
+}
 
 /* RESPONSIVE DESIGN */
 
@@ -378,6 +395,12 @@ section {
 	.refresh_button{
 		width: 20%;
 	}
+
+	div.restaurant_list{
+		width: 100%;
+        margin-bottom: 30px;
+    }
+
 	/* #header h1 { */
 		/* display: none; */
 	/* } */
@@ -390,7 +413,7 @@ section {
 		font-size: 20px;
 		line-height: 20px;
 	}
-	h1 {
+	h1, .restaurant_list__title {
 		font-size: 60px;
 		line-height: 58px;
 	}
@@ -400,7 +423,7 @@ section {
 		line-height: 38px;
 	}
 
-	h3 {
+	h3, .restaurant_list__item{
 		font-size: 18px;
 		line-height: 30px;
 	}
@@ -426,6 +449,10 @@ section {
 	#header .col-md-8 {
 		top: 5%;
 	}
+	div.restaurant_list{
+		width: 100%;
+        margin-bottom: 30px;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */

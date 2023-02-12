@@ -80,24 +80,28 @@ driver.implicitly_wait(5)
 for image in images:
     url = image.get_attribute('src')
     img_url.append(url)
-    time.sleep(0.5)
+time.sleep(0.5)
 driver.implicitly_wait(5)
 
 urllib.request.urlretrieve(img_url[0], 'mega' + ".jpg")
 time.sleep(0.5)
 
-# 메뉴 html 크롤링해서 html파일에 저장
+# 포스트 텍스트 크롤링
 
-# html_source = driver.page_source
-# soup = BeautifulSoup(html_source, 'html.parser')
-# menu = soup.find('h1', attrs={"class": "_aacl._aaco._aacu._aacx._aad7._aade"})
-# print(menu.prettify())
+url = driver.current_url
+driver.get(url)
+time.sleep(0.5)
+driver.implicitly_wait(5)
+elem = driver.find_element(
+    by=By.CSS_SELECTOR, value='div._a9zs')
+time.sleep(0.5)
+source_code = elem.get_attribute("innerHTML")
 
-# # html파일쓰기
-# f = open('megatodaymenu.html', 'w')
-# message = menu.prettify()
-# f.write(message)
-# f.close()
+with open('./megatodaymenu.html', 'w', encoding='utf-8') as f:
+    time.sleep(0.5)
+    f.write(source_code)
+    time.sleep(0.5)
+f.close()
 
 
 # 스마트빌딩점
@@ -137,6 +141,21 @@ time.sleep(0.5)
 driver.implicitly_wait(5)
 
 
+url = driver.current_url
+driver.get(url)
+time.sleep(0.5)
+driver.implicitly_wait(5)
+elem = driver.find_element(
+    by=By.CSS_SELECTOR, value='div._a9zs')
+time.sleep(0.5)
+source_code = elem.get_attribute("innerHTML")
+
+with open('./smarttodaymenu.html', 'w', encoding='utf-8') as f:
+    time.sleep(0.5)
+    f.write(source_code)
+    time.sleep(0.5)
+f.close()
+
 # 레알짱
 
 driver.get(url3)
@@ -172,6 +191,21 @@ else:
     urllib.request.urlretrieve(img_url[12], 'real' + ".jpg")
 time.sleep(0.5)
 driver.implicitly_wait(5)
+
+url = driver.current_url
+driver.get(url)
+time.sleep(0.5)
+driver.implicitly_wait(5)
+elem = driver.find_element(
+    by=By.CSS_SELECTOR, value='div._a9zs')
+time.sleep(0.5)
+source_code = elem.get_attribute("innerHTML")
+time.sleep(0.5)
+with open('./realtodaymenu.html', 'w', encoding='utf-8') as f:
+    time.sleep(0.5)
+    f.write(source_code)
+    time.sleep(0.5)
+f.close()
 
 driver.quit()
 

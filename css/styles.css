@@ -381,6 +381,9 @@ div.restaurant_footer{
 	margin-bottom: 20px;
 }
 
+h1._aacl._aaco._aacu._aacx._aad7._aade{
+	font-size: 20px;
+}
 /* RESPONSIVE DESIGN */
 
 /* Extra Small devices (tablets, 446px and less) */
@@ -444,7 +447,7 @@ div.restaurant_footer{
 		font-size: 20px;
 		line-height: 20px;
 	}
-	
+
 	.clocktitle{
 		font-size: 11px;
 	}
@@ -464,6 +467,9 @@ div.restaurant_footer{
 		width: 85%;
         margin-bottom: 30px;
     }
+	h1._aacl._aaco._aacu._aacx._aad7._aade{
+		font-size: 20px;
+	}
 }
 
 /* Medium devices (desktops, 992px and up) */

@@ -398,7 +398,7 @@ div.restaurant_list__title{
 	}
 
 	div.restaurant_list{
-		width: 95%;
+		width: 85%;
         margin-bottom: 30px;
     }
 
@@ -455,7 +455,7 @@ div.restaurant_list__title{
 		align-items: center;
 	}
 	div.restaurant_list{
-		width: 95%;
+		width: 85%;
         margin-bottom: 30px;
     }
 }

@@ -383,6 +383,9 @@ div.restaurant_footer{
 
 h1._aacl._aaco._aacu._aacx._aad7._aade{
 	font-size: 20px;
+	line-height: 22px;
+	font-weight: solid;
+    color: black;
 }
 /* RESPONSIVE DESIGN */
 
@@ -468,7 +471,8 @@ h1._aacl._aaco._aacu._aacx._aad7._aade{
         margin-bottom: 30px;
     }
 	h1._aacl._aaco._aacu._aacx._aad7._aade{
-		font-size: 20px;
+		font-size: 16px;
+		line-height: 18px;
 	}
 }
 

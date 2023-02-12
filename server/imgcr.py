@@ -199,11 +199,15 @@ driver.implicitly_wait(5)
 elem = driver.find_element(
     by=By.CSS_SELECTOR, value='div._a9zs')
 time.sleep(0.5)
-source_code = elem.get_attribute("innerHTML")
+source_code = elem.get_attribute("outerHTML")
 time.sleep(0.5)
-with open('./realtodaymenu.html', 'w', encoding='utf-8') as f:
+source_code_split_str = source_code.split('&')
+print(source_code_split_str[0])
+
+
+with open('./menu.html', 'w') as f:
     time.sleep(0.5)
-    f.write(source_code)
+    f.write(source_code_split_str[0] + '</h1></div>')
     time.sleep(0.5)
 f.close()
 

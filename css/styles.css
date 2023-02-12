@@ -361,17 +361,17 @@ section {
 	display:flex;
 }
 
-div.reataurant_around{
+div.restaurant_around{
 	display:flex;
 }
 div.restaurant_list{
 	width: 20%;
 	margin-bottom: 30px;
-	border: 1px, solid, #008ed6;
+	border: 2px solid #008ed6;
 	border-radius: 20%;
 }
 div.restaurant_list__title{
-	margin-bottom: 20px;
+	margin: 20px 0px;
 }
 
 /* RESPONSIVE DESIGN */
@@ -397,7 +397,7 @@ div.restaurant_list__title{
 	}
 
 	div.restaurant_list{
-		width: 100%;
+		width: 95%;
         margin-bottom: 30px;
     }
 
@@ -449,8 +449,11 @@ div.restaurant_list__title{
 	#header .col-md-8 {
 		top: 5%;
 	}
+	div.restaurant_around{
+		flex-direction: column;;
+	}
 	div.restaurant_list{
-		width: 100%;
+		width: 95%;
         margin-bottom: 30px;
     }
 }

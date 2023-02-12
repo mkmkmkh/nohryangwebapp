@@ -377,6 +377,9 @@ div.restaurant_list{
 div.restaurant_list__title{
 	margin: 20px 0px;
 }
+div.restaurant_footer{
+	margin-bottom: 20px;
+}
 
 /* RESPONSIVE DESIGN */
 

@@ -363,9 +363,10 @@ section {
 
 div.restaurant_around{
 	display:flex;
+	justify-content: space-around;
 }
 div.restaurant_list{
-	width: 20%;
+	width: 18%;
 	margin-bottom: 30px;
 	border: 2px solid #008ed6;
 	border-radius: 20%;
@@ -450,7 +451,8 @@ div.restaurant_list__title{
 		top: 5%;
 	}
 	div.restaurant_around{
-		flex-direction: column;;
+		flex-direction: column;
+		align-items: center;
 	}
 	div.restaurant_list{
 		width: 95%;

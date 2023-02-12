@@ -360,7 +360,10 @@ section {
 .map1.active,.map2.active,.map3.active{
 	display:flex;
 }
-
+div.restaurant_section{
+	display: flex;
+	flex-direction: column;
+}
 div.restaurant_around{
 	display:flex;
 	justify-content: space-around;
@@ -398,7 +401,7 @@ div.restaurant_list__title{
 	}
 
 	div.restaurant_list{
-		width: 85%;
+		width: 65%;
         margin-bottom: 30px;
     }
 

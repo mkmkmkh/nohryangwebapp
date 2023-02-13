@@ -10,6 +10,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 import time
 from datetime import datetime
+from weekday import *
+
 # from func import *
 
 # options = webdriver.ChromeOptions()
@@ -183,7 +185,6 @@ driver.implicitly_wait(5)
 
 t = time.localtime()
 current_time = time.strftime("%H", t)
-print(current_time)
 
 if current_time == '10' or current_time == '11':
     urllib.request.urlretrieve(img_url[13], 'real' + ".jpg")
@@ -205,11 +206,14 @@ source_code_split_str = source_code.split('&')
 print(source_code_split_str[0])
 
 
-with open('./menu.html', 'w') as f:
+with open('./realtodaymenu.html', 'w') as f:
     time.sleep(0.5)
     f.write(source_code_split_str[0] + '</h1></div>')
     time.sleep(0.5)
 f.close()
+# 요일계산후 일요일휴무를 토 밤부터 일밤까지 출력 sunday.html
+what_day_is_it(date.today())
+
 
 driver.quit()
 

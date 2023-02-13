@@ -151,10 +151,12 @@ elem = driver.find_element(
     by=By.CSS_SELECTOR, value='div._a9zs')
 time.sleep(0.5)
 source_code = elem.get_attribute("innerHTML")
+# 스트링 가공
+source_code_split_str = source_code.split('&')
 
-with open('./smarttodaymenu.html', 'w', encoding='utf-8') as f:
+with open('./smarttodaymenu.html', 'w') as f:
     time.sleep(0.5)
-    f.write(source_code)
+    f.write(source_code_split_str[0] + '</h1>')
     time.sleep(0.5)
 f.close()
 
@@ -202,6 +204,8 @@ elem = driver.find_element(
 time.sleep(0.5)
 source_code = elem.get_attribute("outerHTML")
 time.sleep(0.5)
+
+
 source_code_split_str = source_code.split('&')
 print(source_code_split_str[0])
 

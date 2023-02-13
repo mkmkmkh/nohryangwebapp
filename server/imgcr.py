@@ -212,7 +212,7 @@ print(source_code_split_str[0])
 
 with open('./realtodaymenu.html', 'w') as f:
     time.sleep(0.5)
-    f.write(source_code_split_str[0] + '</h1></div>')
+    f.write(source_code_split_str[0]+' 등' + '</h1></div>')
     time.sleep(0.5)
 f.close()
 # 요일계산후 일요일휴무를 토 밤부터 일밤까지 출력 sunday.html

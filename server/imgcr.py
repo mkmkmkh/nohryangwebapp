@@ -154,7 +154,7 @@ source_code = elem.get_attribute("innerHTML")
 # 스트링 가공
 source_code_split_str = source_code.split('&')
 
-with open('./smarttodaymenu.html', 'w') as f:
+with open('./smarttodaymenu.html', 'w', encoding='utf-8') as f:
     time.sleep(0.5)
     f.write(source_code_split_str[0] + '</h1>')
     time.sleep(0.5)
@@ -210,7 +210,7 @@ source_code_split_str = source_code.split('&')
 print(source_code_split_str[0])
 
 
-with open('./realtodaymenu.html', 'w') as f:
+with open('./realtodaymenu.html', 'w', encoding='utf-8') as f:
     time.sleep(0.5)
     f.write(source_code_split_str[0]+' 등' + '</h1></div>')
     time.sleep(0.5)

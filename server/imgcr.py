@@ -56,10 +56,11 @@ driver.find_element(
 time.sleep(0.5)
 driver.implicitly_wait(5)
 
-url1 = 'https://instagram.com/goldenball9_mega/'
-url2 = 'https://instagram.com/goldenball9_smart/'
-url3 = 'https://instagram.com/real_jjang_3/'
-
+url1 = 'https://www.instagram.com/goldenball9_mega/'
+url2 = 'https://www.instagram.com/goldenball9_smart/'
+url3 = 'https://www.instagram.com/real_jjang_3/'
+url4 = 'https://www.instagram.com/real_jjang_1/'
+url5 = 'https://www.instagram.com/tongtongtong22/'
 # 메가점
 
 driver.get(url1)
@@ -160,7 +161,7 @@ with open('./smarttodaymenu.html', 'w', encoding='utf-8') as f:
     time.sleep(0.5)
 f.close()
 
-# 레알짱
+# 레알짱_3호점
 
 driver.get(url3)
 time.sleep(0.5)
@@ -202,21 +203,127 @@ driver.implicitly_wait(5)
 elem = driver.find_element(
     by=By.CSS_SELECTOR, value='div._a9zs')
 time.sleep(0.5)
-source_code = elem.get_attribute("outerHTML")
+source_code = elem.get_attribute("innerHTML")
 time.sleep(0.5)
 
 
 source_code_split_str = source_code.split('&')
-print(source_code_split_str[0])
 
 
 with open('./realtodaymenu.html', 'w', encoding='utf-8') as f:
     time.sleep(0.5)
-    f.write(source_code_split_str[0]+' 등' + '</h1></div>')
+    f.write(source_code_split_str[0]+' 등' + '</h1>')
     time.sleep(0.5)
 f.close()
 # 요일계산후 일요일휴무를 토 밤부터 일밤까지 출력 sunday.html
 what_day_is_it(date.today())
+
+# 레알짱 본점
+
+driver.get(url4)
+time.sleep(0.5)
+driver.implicitly_wait(5)
+
+# 첫번쨰 게시물 클릭s
+driver.find_element(
+    by=By.CSS_SELECTOR, value='div._aagw').click()
+time.sleep(0.5)
+driver.implicitly_wait(5)
+# 첫번쨰 이미지 소스 프린트.
+images = driver.find_elements(
+    by=By.CSS_SELECTOR, value='img.x5yr21d.xu96u03.x10l6tqk.x13vifvy.x87ps6o.xh8yej3')
+img_url = []
+time.sleep(0.5)
+driver.implicitly_wait(5)
+# img_url = images.__getattribute__('src')
+
+for image in images:
+    url = image.get_attribute('src')
+    img_url.append(url)
+time.sleep(0.5)
+driver.implicitly_wait(5)
+
+t = time.localtime()
+current_time = time.strftime("%H", t)
+
+if current_time == '10' or current_time == '11':
+    urllib.request.urlretrieve(img_url[13], 'real_1' + ".jpg")
+else:
+    urllib.request.urlretrieve(img_url[12], 'real_1' + ".jpg")
+time.sleep(0.5)
+driver.implicitly_wait(5)
+
+url = driver.current_url
+driver.get(url)
+time.sleep(0.5)
+driver.implicitly_wait(5)
+elem = driver.find_element(
+    by=By.CSS_SELECTOR, value='div._a9zs')
+time.sleep(0.5)
+source_code = elem.get_attribute("innerHTML")
+time.sleep(0.5)
+
+
+source_code_split_str = source_code.split('#')
+
+
+with open('./real_1_todaymenu.html', 'w', encoding='utf-8') as f:
+    time.sleep(0.5)
+    f.write(source_code_split_str[0]+' 등' + '</h1>')
+    time.sleep(0.5)
+f.close()
+# 요일계산후 일요일휴무를 토 밤부터 일밤까지 출력 sunday.html
+what_day_is_it(date.today())
+
+
+# 통통이 뷔페
+
+driver.get(url5)
+time.sleep(0.5)
+driver.implicitly_wait(5)
+
+# 첫번쨰 게시물 클릭s
+driver.find_element(
+    by=By.CSS_SELECTOR, value='div._aagw').click()
+time.sleep(0.5)
+driver.implicitly_wait(5)
+
+
+# 이미지 소스 프린트.
+images = driver.find_elements(
+    by=By.CSS_SELECTOR, value='img.x5yr21d.xu96u03.x10l6tqk.x13vifvy.x87ps6o.xh8yej3')
+img_url = []
+time.sleep(0.5)
+driver.implicitly_wait(5)
+# img_url = images.__getattribute__('src')
+
+for image in images:
+    url = image.get_attribute('src')
+    img_url.append(url)
+time.sleep(0.5)
+driver.implicitly_wait(5)
+
+urllib.request.urlretrieve(img_url[0], 'tong' + ".jpg")
+time.sleep(0.5)
+driver.implicitly_wait(5)
+
+
+url = driver.current_url
+driver.get(url)
+time.sleep(0.5)
+driver.implicitly_wait(5)
+elem = driver.find_element(
+    by=By.CSS_SELECTOR, value='div._a9zs')
+time.sleep(0.5)
+source_code = elem.get_attribute("innerHTML")
+# 스트링 가공
+source_code_split_str = source_code.split('#')
+
+with open('./tong_todaymenu.html', 'w', encoding='utf-8') as f:
+    time.sleep(0.5)
+    f.write(source_code_split_str[0] + '</h1>')
+    time.sleep(0.5)
+f.close()
 
 
 driver.quit()

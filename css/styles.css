@@ -351,13 +351,13 @@ section {
 	color: #008ed6;
 }
 
-.map1,.map2,.map3{
+.map1,.map2,.map3,.map4,.map5{
 	display: none;
 	width: 90%;
     height: 320px;
 }
 
-.map1.active,.map2.active,.map3.active{
+.map1.active,.map2.active,.map3.active,.map4.active,.map5.active{
 	display:flex;
 }
 div.restaurant_section{

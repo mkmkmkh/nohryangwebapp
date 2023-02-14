@@ -1,9 +1,14 @@
 const toogleBtn1 = document.querySelector('.map1_toogleBtn');
 const toogleBtn2 = document.querySelector('.map2_toogleBtn');
 const toogleBtn3 = document.querySelector('.map3_toogleBtn');
+const toogleBtn4 = document.querySelector('.map4_toogleBtn');
+const toogleBtn5 = document.querySelector('.map5_toogleBtn');
+
 const map1 = document.querySelector('.map1');
 const map2 = document.querySelector('.map2');
 const map3 = document.querySelector('.map3');
+const map4 = document.querySelector('.map4');
+const map5 = document.querySelector('.map5');
 
 toogleBtn1.addEventListener('click', () => {
     map1.classList.toggle('active');
@@ -13,6 +18,12 @@ toogleBtn2.addEventListener('click', () => {
 })
 toogleBtn3.addEventListener('click', () => {
     map3.classList.toggle('active');
+})
+toogleBtn4.addEventListener('click', () => {
+    map4.classList.toggle('active');
+})
+toogleBtn5.addEventListener('click', () => {
+    map5.classList.toggle('active');
 })
 
 function initMap() {

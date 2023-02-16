@@ -39,7 +39,7 @@ WebDriverWait(driver, 10).until(EC.presence_of_element_located(
 time.sleep(0.5)
 # 기다리지 않고 그냥 가져오는 코드
 driver.find_element(
-    by=By.XPATH, value='//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys('zx031263')
+    by=By.XPATH, value='//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys('zx0312632')
 time.sleep(1)
 driver.find_element(
     by=By.XPATH, value='//*[@id="loginForm"]/div/div[3]/button').click()

@@ -61,6 +61,8 @@ url2 = 'https://www.instagram.com/goldenball9_smart/'
 url3 = 'https://www.instagram.com/real_jjang_3/'
 url4 = 'https://www.instagram.com/real_jjang_1/'
 url5 = 'https://www.instagram.com/tongtongtong22/'
+url6 = 'https://www.instagram.com/bobdream_/'
+
 # 메가점
 
 driver.get(url1)
@@ -322,6 +324,52 @@ source_code_split_str = source_code.split('#')
 with open('./tong_todaymenu.html', 'w', encoding='utf-8') as f:
     time.sleep(0.5)
     f.write(source_code_split_str[0] + '</h1>')
+    time.sleep(0.5)
+f.close()
+
+
+# 밥드림
+
+driver.get(url1)
+time.sleep(0.5)
+driver.implicitly_wait(5)
+
+# 첫번쨰 게시물 클릭s
+driver.find_element(
+    by=By.CSS_SELECTOR, value='div._aagw').click()
+time.sleep(0.5)
+driver.implicitly_wait(5)
+# 첫번쨰 이미지 소스 프린트.
+images = driver.find_elements(
+    by=By.CSS_SELECTOR, value='img.x5yr21d.xu96u03.x10l6tqk.x13vifvy.x87ps6o.xh8yej3')
+img_url = []
+time.sleep(0.5)
+driver.implicitly_wait(5)
+# img_url = images.__getattribute__('src')
+
+for image in images:
+    url = image.get_attribute('src')
+    img_url.append(url)
+time.sleep(0.5)
+driver.implicitly_wait(5)
+
+urllib.request.urlretrieve(img_url[0], 'dream' + ".jpg")
+time.sleep(0.5)
+
+# 포스트 텍스트 크롤링
+
+url = driver.current_url
+driver.get(url)
+time.sleep(0.5)
+driver.implicitly_wait(5)
+elem = driver.find_element(
+    by=By.CSS_SELECTOR, value='div._a9zs')
+time.sleep(0.5)
+source_code = elem.get_attribute("innerHTML")
+
+with open('./dreamtodaymenu.html', 'w', encoding='utf-8') as f:
+    time.sleep(0.5)
+    f.write(source_code)
     time.sleep(0.5)
 f.close()
 

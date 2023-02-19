@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/comment.js"></script>
+</head>
+<body>
+  <div>
+    <h2>Leave a comment</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" required></textarea>
+      <br>
+      <button type="submit" onclick="submitComment()">Submit</button>
+    </form>
+  </div>
+  
+  <div>
+    <h2>Comments</h2>
+    <ul id="comment-list">
+    </ul>
+  </div>
+</body>
+</html>

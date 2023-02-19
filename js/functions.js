@@ -53,7 +53,7 @@ DONT CHANGE ANY CODE UNDER THIS LINE - DONT CHANGE ANY CODE UNDER THIS LINE - DO
 		
 			$('#contact_form').animate({opacity:'0.3'}, 500);
 				
-			var dataString = '&My_ID='+ name + '&Friend_ID=' + phone + '&sns=' + comment;
+			var dataString = '&My_ID='+ name + '&Friend_ID=' + phone + '&SNS=' + comment;
 			// + '&phone=' + phone + '&comment=' + comment;
 			//alert (dataString);return false;
 			$.ajax({

@@ -1,17 +1,29 @@
 function submitComment() {
   // Get user inputs
-  let name = document.getElementById("name").value;
-  let comment = document.getElementById("comment").value;
-  
+  let my_id = document.getElementById("my_id").value;
+  let friend_id = document.getElementById("friend_id").value;
+  let sns_name = document.getElementById("sns_name").value;
   // Create new comment element
   let newComment = document.createElement("li");
-  newComment.innerHTML = "<strong>" + name + ":</strong> " + comment;
+  newComment.innerHTML = "<h3><strong>" + sns_name + ":</strong> " + '내ID: ' +my_id+',친구ID: ' + friend_id + '</h3>';
   
   // Append new comment to comment list
   let commentList = document.getElementById("comment-list");
   commentList.appendChild(newComment);
   
   // Clear form inputs
-  document.getElementById("name").value = "";
-  document.getElementById("comment").value = "";
+  document.getElementById("my_id").value = "";
+  document.getElementById("friend_id").value = "";
+  document.getElementById("sns_name").value = "";
+}
+
+// Get a reference to the button element
+const scrollBtn = document.getElementById("scrollBtn");
+scrollBtn.addEventListener("click", scrollToEvent);
+
+function scrollToEvent() {
+  window.scrollTo({
+    top: 1000,
+    behavior: "smooth"
+  });
 }

@@ -12,6 +12,8 @@ import time
 from datetime import datetime
 from weekday import *
 
+
+
 # from func import *
 
 # options = webdriver.ChromeOptions()
@@ -218,7 +220,7 @@ with open('./realtodaymenu.html', 'w', encoding='utf-8') as f:
     time.sleep(0.5)
 f.close()
 # 요일계산후 일요일휴무를 토 밤부터 일밤까지 출력 sunday.html
-what_day_is_it(date.today())
+
 
 # 레알짱 본점
 
@@ -275,7 +277,6 @@ with open('./real_1_todaymenu.html', 'w', encoding='utf-8') as f:
     time.sleep(0.5)
 f.close()
 # 요일계산후 일요일휴무를 토 밤부터 일밤까지 출력 sunday.html
-what_day_is_it(date.today())
 
 
 # 통통이 뷔페
@@ -330,7 +331,7 @@ f.close()
 
 # 밥드림
 
-driver.get(url1)
+driver.get(url6)
 time.sleep(0.5)
 driver.implicitly_wait(5)
 
@@ -373,8 +374,27 @@ with open('./dreamtodaymenu.html', 'w', encoding='utf-8') as f:
     time.sleep(0.5)
 f.close()
 
-
 driver.quit()
+
+#일요일 휴무 코드
+day = t.tm_wday
+if day == '6':
+    with open('./sunday.html', 'w', encoding='utf-8') as f:
+        time.sleep(0.5)
+        f.write('<h4>일요일 휴무</h4>')
+        time.sleep(0.5)
+    f.close()
+else:
+    with open('./sunday.html', 'w', encoding='utf-8') as f:
+        time.sleep(0.5)
+        f.write('')
+        time.sleep(0.5)
+    f.close()
+
+
+
+
+
 
 
 # for index, link in enumerate(img_url):

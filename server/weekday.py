@@ -22,4 +22,6 @@ def what_day_is_it(date):
         f.close()
 
 
-what_day_is_it(date.today())
+t = time.localtime()
+day = t.tm_wday
+print(day)

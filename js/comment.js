@@ -11,6 +11,14 @@ function submitComment() {
   let commentList = document.getElementById("comment-list");
   commentList.appendChild(newComment);
   
+  let my_idLabel
+  let friend_idLabel
+  let sns_nameLabel
+
+  my_idLabel.innerHTML = "Enter your id:";
+  friend_idLabel.innerHTML = "Enter friend's id:";
+  sns_nameLabel.innerHTML = "Enter SNS name:";
+
   // Clear form inputs
   document.getElementById("my_id").value = "";
   document.getElementById("friend_id").value = "";
@@ -18,12 +26,3 @@ function submitComment() {
 }
 
 // Get a reference to the button element
-const scrollBtn = document.getElementById("scrollBtn");
-scrollBtn.addEventListener("click", scrollToEvent);
-
-function scrollToEvent() {
-  window.scrollTo({
-    top: 1000,
-    behavior: "smooth"
-  });
-}

@@ -54,7 +54,7 @@ scrollBtn.addEventListener("click", scrollToEvent);
 
 function scrollToEvent() {
   window.scrollTo({
-    top: 1000,
+    top: 5000,
     behavior: "smooth"
   });
 }

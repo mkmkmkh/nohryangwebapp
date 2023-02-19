@@ -47,3 +47,14 @@ function initMap() {
 }
 
 window.initMap = initMap;
+
+//이벤트 참여 스크롤 버튼
+const scrollBtn = document.getElementById("scrollBtn");
+scrollBtn.addEventListener("click", scrollToEvent);
+
+function scrollToEvent() {
+  window.scrollTo({
+    top: 1000,
+    behavior: "smooth"
+  });
+}

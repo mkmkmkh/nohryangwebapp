@@ -4,29 +4,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src=".nohryang0.1/js/comment.js"></script>
+  <title>Document</title>
 </head>
 <body>
-  <div>
-    <h2>Leave a comment</h2>
-    <form>
-      <label for="my_id">MY ID:</label>
-      <input type="text" id="my_id" name="my_id" class="form-control" required>
-      <br>
-      <label for="friend_id">friend's ID:</label>
-      <input type="text" id="friend_id" name="friend_id" class="form-control" required>
-      <br>
-      <label for="sns_name">SNS Name:</label>
-      <input type="text" id="sns_name" name="sns_name" class="form-control" required>
-      <br>
-      <button type="submit" class="button-leweb" onclick="submitComment()">Submit</button>
-    </form>
-  </div>
   
-  <div>
-    <h2>이벤트 참가 </h2>
-    <ul id="comment-list">
-    </ul>
-  </div>
 </body>
 </html>
+<div>
+  <h2>Leave a comment</h2>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="comment">Comment:</label>
+    <textarea id="comment" name="comment" required></textarea>
+    <br>
+    <button type="submit" onclick="submitComment()">Submit</button>
+  </form>
+</div>
+
+<div>
+  <h2>Comments</h2>
+  <ul id="comment-list">
+  </ul>
+</div>

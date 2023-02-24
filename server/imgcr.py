@@ -287,22 +287,22 @@ driver.implicitly_wait(5)
 
 
 # 이미지 소스 프린트.
-images = driver.find_elements(
-    by=By.CSS_SELECTOR, value='img.x5yr21d.xu96u03.x10l6tqk.x13vifvy.x87ps6o.xh8yej3')
-img_url = []
-time.sleep(0.5)
-driver.implicitly_wait(5)
-# img_url = images.__getattribute__('src')
+# images = driver.find_elements(
+#     by=By.CSS_SELECTOR, value='img.x5yr21d.xu96u03.x10l6tqk.x13vifvy.x87ps6o.xh8yej3')
+# img_url = []
+# time.sleep(0.5)
+# driver.implicitly_wait(5)
+# # img_url = images.__getattribute__('src')
 
-for image in images:
-    url = image.get_attribute('src')
-    img_url.append(url)
-time.sleep(0.5)
-driver.implicitly_wait(5)
+# for image in images:
+#     url = image.get_attribute('src')
+#     img_url.append(url)
+# time.sleep(0.5)
+# driver.implicitly_wait(5)
 
-urllib.request.urlretrieve(img_url[0], 'tong' + ".jpg")
-time.sleep(0.5)
-driver.implicitly_wait(5)
+# urllib.request.urlretrieve(img_url[0], 'tong' + ".jpg")
+# time.sleep(0.5)
+# driver.implicitly_wait(5)
 
 
 url = driver.current_url
@@ -353,22 +353,22 @@ f.close()
 
 # 포스트 텍스트 크롤링
 
-url = driver.current_url
-driver.get(url)
-time.sleep(0.5)
-driver.implicitly_wait(5)
-elem = driver.find_element(
-    by=By.CSS_SELECTOR, value='div._a9zs')
-time.sleep(0.5)
-source_code = elem.get_attribute("innerHTML")
-# 스트링 가공
-source_code_split_str = source_code.split('#')
-# 파일에저장
-with open('./dreamtodaymenu.html', 'w', encoding='utf-8') as f:
-    time.sleep(0.5)
-    f.write(source_code)
-    time.sleep(0.5)
-f.close()
+# url = driver.current_url
+# driver.get(url)
+# time.sleep(0.5)
+# driver.implicitly_wait(5)
+# elem = driver.find_element(
+#     by=By.CSS_SELECTOR, value='div._a9zs')
+# time.sleep(0.5)
+# source_code = elem.get_attribute("innerHTML")
+# # 스트링 가공
+# source_code_split_str = source_code.split('#')
+# # 파일에저장
+# with open('./dreamtodaymenu.html', 'w', encoding='utf-8') as f:
+#     time.sleep(0.5)
+#     f.write(source_code)
+#     time.sleep(0.5)
+# f.close()
 
 driver.quit()
 

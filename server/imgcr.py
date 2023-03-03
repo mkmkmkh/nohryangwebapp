@@ -205,7 +205,7 @@ source_code = elem.get_attribute("innerHTML")
 time.sleep(0.5)
 
 
-source_code_split_str = source_code.split('&')
+source_code_split_str = source_code.split('항시메뉴')
 
 
 with open('./realtodaymenu.html', 'w', encoding='utf-8') as f:
@@ -262,7 +262,7 @@ source_code = elem.get_attribute("innerHTML")
 time.sleep(0.5)
 
 
-source_code_split_str = source_code.split('#')
+source_code_split_str = source_code.split('레알짱은')
 
 
 with open('./real_1_todaymenu.html', 'w', encoding='utf-8') as f:
@@ -314,7 +314,7 @@ elem = driver.find_element(
 time.sleep(0.5)
 source_code = elem.get_attribute("innerHTML")
 # 스트링 가공
-source_code_split_str = source_code.split('#')
+source_code_split_str = source_code.split('맛있게드세요')
 
 with open('./tong_todaymenu.html', 'w', encoding='utf-8') as f:
     time.sleep(0.5)

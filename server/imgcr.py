@@ -123,10 +123,10 @@ time.sleep(0.5)
 driver.implicitly_wait(5)
 
 # 두번째 사진으로 클릭을통해 넘어가기
-driver.find_element(
-    by=By.CSS_SELECTOR, value='div._aaqg._aaqh>button').click()
-time.sleep(0.5)
-driver.implicitly_wait(5)
+# driver.find_element(
+#     by=By.CSS_SELECTOR, value='div._aaqg._aaqh>button').click()
+# time.sleep(0.5)
+# driver.implicitly_wait(5)
 
 # 이미지 소스 프린트.
 images = driver.find_elements(
@@ -142,7 +142,7 @@ for image in images:
 time.sleep(0.5)
 driver.implicitly_wait(5)
 
-urllib.request.urlretrieve(img_url[1], 'smart' + ".jpg")
+urllib.request.urlretrieve(img_url[0], 'smart' + ".jpg")
 time.sleep(0.5)
 driver.implicitly_wait(5)
 

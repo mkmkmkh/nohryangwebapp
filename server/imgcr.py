@@ -22,6 +22,7 @@ from weekday import *
 # # 혹은 options.add_argument("--disable-gpu")
 
 # driver = webdriver.Chrome('./chromedriver.exe', chrome_options=options)
+im_wait_time=7
 
 options = webdriver.ChromeOptions()
 # options.add_argument("headless")
@@ -44,18 +45,18 @@ driver.find_element(
 time.sleep(1)
 driver.find_element(
     by=By.XPATH, value='//*[@id="loginForm"]/div/div[3]/button').click()
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 time.sleep(0.5)
 driver.find_element(
     by=By.CLASS_NAME, value='_ac8f').click()
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 driver.find_element(
     by=By.CLASS_NAME, value='_a9--._a9_1').click()
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 url1 = 'https://www.instagram.com/goldenball9_mega/'
 url2 = 'https://www.instagram.com/goldenball9_smart/'
@@ -68,26 +69,26 @@ url6 = 'https://www.instagram.com/bobdream_/'
 
 driver.get(url1)
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 # 첫번쨰 게시물 클릭s
 driver.find_element(
     by=By.CSS_SELECTOR, value='div._aagw').click()
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 # 첫번쨰 이미지 소스 프린트.
 images = driver.find_elements(
     by=By.CSS_SELECTOR, value='img.x5yr21d.xu96u03.x10l6tqk.x13vifvy.x87ps6o.xh8yej3')
 img_url = []
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 # img_url = images.__getattribute__('src')
 
 for image in images:
     url = image.get_attribute('src')
     img_url.append(url)
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 urllib.request.urlretrieve(img_url[0], 'mega' + ".jpg")
 time.sleep(0.5)
@@ -97,7 +98,7 @@ time.sleep(0.5)
 url = driver.current_url
 driver.get(url)
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 elem = driver.find_element(
     by=By.CSS_SELECTOR, value='div._a9zs')
 time.sleep(0.5)
@@ -114,43 +115,43 @@ f.close()
 
 driver.get(url2)
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 # 첫번쨰 게시물 클릭s
 driver.find_element(
     by=By.CSS_SELECTOR, value='div._aagw').click()
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 # 두번째 사진으로 클릭을통해 넘어가기
 # driver.find_element(
 #     by=By.CSS_SELECTOR, value='div._aaqg._aaqh>button').click()
 # time.sleep(0.5)
-# driver.implicitly_wait(5)
+# driver.implicitly_wait(im_wait_time)
 
 # 이미지 소스 프린트.
 images = driver.find_elements(
     by=By.CSS_SELECTOR, value='img.x5yr21d.xu96u03.x10l6tqk.x13vifvy.x87ps6o.xh8yej3')
 img_url = []
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 # img_url = images.__getattribute__('src')
 
 for image in images:
     url = image.get_attribute('src')
     img_url.append(url)
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 urllib.request.urlretrieve(img_url[0], 'smart' + ".jpg")
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 
 url = driver.current_url
 driver.get(url)
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 elem = driver.find_element(
     by=By.CSS_SELECTOR, value='div._a9zs')
 time.sleep(0.5)
@@ -168,36 +169,36 @@ f.close()
 
 driver.get(url3)
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 # 첫번쨰 게시물 클릭s
 driver.find_element(
     by=By.CSS_SELECTOR, value='div._aagw').click()
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 # 첫번쨰 이미지 소스 프린트.
 images = driver.find_elements(
     by=By.CSS_SELECTOR, value='img.x5yr21d.xu96u03.x10l6tqk.x13vifvy.x87ps6o.xh8yej3')
 img_url = []
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 # img_url = images.__getattribute__('src')
 
 for image in images:
     url = image.get_attribute('src')
     img_url.append(url)
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 urllib.request.urlretrieve(img_url[13], 'real' + ".jpg")
 
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 url = driver.current_url
 driver.get(url)
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 elem = driver.find_element(
     by=By.CSS_SELECTOR, value='div._a9zs')
 time.sleep(0.5)
@@ -220,26 +221,26 @@ f.close()
 
 driver.get(url4)
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 # 첫번쨰 게시물 클릭s
 driver.find_element(
     by=By.CSS_SELECTOR, value='div._aagw').click()
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 # 첫번쨰 이미지 소스 프린트.
 images = driver.find_elements(
     by=By.CSS_SELECTOR, value='img.x5yr21d.xu96u03.x10l6tqk.x13vifvy.x87ps6o.xh8yej3')
 img_url = []
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 # img_url = images.__getattribute__('src')
 
 for image in images:
     url = image.get_attribute('src')
     img_url.append(url)
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 t = time.localtime()
 current_time = time.strftime("%H", t)
@@ -249,12 +250,12 @@ if current_time == '10' or current_time == '11':
 else:
     urllib.request.urlretrieve(img_url[12], 'real_1' + ".jpg")
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 url = driver.current_url
 driver.get(url)
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 elem = driver.find_element(
     by=By.CSS_SELECTOR, value='div._a9zs')
 time.sleep(0.5)
@@ -277,13 +278,13 @@ f.close()
 
 driver.get(url5)
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 # 첫번쨰 게시물 클릭s
 driver.find_element(
     by=By.CSS_SELECTOR, value='div._aagw').click()
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 
 
 # 이미지 소스 프린트.
@@ -291,24 +292,24 @@ driver.implicitly_wait(5)
 #     by=By.CSS_SELECTOR, value='img.x5yr21d.xu96u03.x10l6tqk.x13vifvy.x87ps6o.xh8yej3')
 # img_url = []
 # time.sleep(0.5)
-# driver.implicitly_wait(5)
+# driver.implicitly_wait(im_wait_time)
 # # img_url = images.__getattribute__('src')
 
 # for image in images:
 #     url = image.get_attribute('src')
 #     img_url.append(url)
 # time.sleep(0.5)
-# driver.implicitly_wait(5)
+# driver.implicitly_wait(im_wait_time)
 
 # urllib.request.urlretrieve(img_url[0], 'tong' + ".jpg")
 # time.sleep(0.5)
-# driver.implicitly_wait(5)
+# driver.implicitly_wait(im_wait_time)
 
 
 url = driver.current_url
 driver.get(url)
 time.sleep(0.5)
-driver.implicitly_wait(5)
+driver.implicitly_wait(im_wait_time)
 elem = driver.find_element(
     by=By.CSS_SELECTOR, value='div._a9zs')
 time.sleep(0.5)
@@ -327,26 +328,26 @@ f.close()
 
 # driver.get(url6)
 # time.sleep(0.5)
-# driver.implicitly_wait(5)
+# driver.implicitly_wait(im_wait_time)
 
 # # 첫번쨰 게시물 클릭s
 # driver.find_element(
 #     by=By.CSS_SELECTOR, value='div._aagw').click()
 # time.sleep(0.5)
-# driver.implicitly_wait(5)
+# driver.implicitly_wait(im_wait_time)
 # # 첫번쨰 이미지 소스 프린트.
 # images = driver.find_elements(
 #     by=By.CSS_SELECTOR, value='img.x5yr21d.xu96u03.x10l6tqk.x13vifvy.x87ps6o.xh8yej3')
 # img_url = []
 # time.sleep(0.5)
-# driver.implicitly_wait(5)
+# driver.implicitly_wait(im_wait_time)
 # # img_url = images.__getattribute__('src')
 
 # for image in images:
 #     url = image.get_attribute('src')
 #     img_url.append(url)
 # time.sleep(0.5)
-# driver.implicitly_wait(5)
+# driver.implicitly_wait(im_wait_time)
 
 # urllib.request.urlretrieve(img_url[0], 'dream' + ".jpg")
 # time.sleep(0.5)
@@ -356,7 +357,7 @@ f.close()
 # url = driver.current_url
 # driver.get(url)
 # time.sleep(0.5)
-# driver.implicitly_wait(5)
+# driver.implicitly_wait(im_wait_time)
 # elem = driver.find_element(
 #     by=By.CSS_SELECTOR, value='div._a9zs')
 # time.sleep(0.5)

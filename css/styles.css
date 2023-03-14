@@ -340,7 +340,7 @@ section {
 
 #footer .fa {
 	font-size: 24px;
-	padding-left: 10px;
+	padding: 10px 10px;
 	color: rgba(22, 182, 234, 0.5);
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;

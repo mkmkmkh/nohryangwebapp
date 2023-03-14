@@ -11,6 +11,7 @@ from bs4 import BeautifulSoup
 import time
 from datetime import datetime
 from weekday import *
+from PIL import Image
 
 
 # from func import *
@@ -22,7 +23,7 @@ from weekday import *
 # # 혹은 options.add_argument("--disable-gpu")
 
 # driver = webdriver.Chrome('./chromedriver.exe', chrome_options=options)
-im_wait_time=7
+im_wait_time = 7
 
 options = webdriver.ChromeOptions()
 # options.add_argument("headless")
@@ -387,6 +388,28 @@ else:
         f.write('')
         time.sleep(0.5)
     f.close()
+
+# 이미지 리사이즈
+
+
+image = Image.open("mega.jpg")
+width, height = image.size
+new_size= (width // 4, height // 4)
+resized_image = image.resize(new_size)
+resized_image.save("mega.jpg")
+
+image = Image.open("smart.jpg")
+resized_image = image.resize(new_size)
+resized_image.save("smart.jpg")
+
+image = Image.open("real.jpg")
+resized_image = image.resize(new_size)
+resized_image.save("real.jpg")
+
+image = Image.open("real_1.jpg")
+resized_image = image.resize(new_size)
+resized_image.save("real_1.jpg")
+
 
 
 # for index, link in enumerate(img_url):

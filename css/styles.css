@@ -151,7 +151,7 @@ section {
 /* HEADER */
 
 #header {
-	background: url(../images/mainview.jpg) no-repeat center center;
+	background: url(../images/mainview_half.jpg) no-repeat center center;
 	background-size: cover;
 	height: 100vh;
 	padding: 0px;

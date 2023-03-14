@@ -394,7 +394,7 @@ else:
 
 image = Image.open("mega.jpg")
 width, height = image.size
-new_size= (width // 4, height // 4)
+new_size= (width // 5 , height // 5)
 resized_image = image.resize(new_size)
 resized_image.save("mega.jpg")
 
